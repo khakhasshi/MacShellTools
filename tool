@@ -15,6 +15,10 @@ PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 WHITE='\033[1;37m'
 GRAY='\033[0;90m'
+ORANGE='\033[38;5;208m'
+PINK='\033[38;5;213m'
+TEAL='\033[38;5;44m'
+BOLD='\033[1m'
 NC='\033[0m'
 
 # Clear screen
@@ -24,49 +28,56 @@ clear_screen() {
 
 # ASCII Art Logo
 show_logo() {
-    echo -e "${CYAN}"
-    cat << 'EOF'
-    __  ___           ____           ______            __    
-   /  |/  /___ ______/ __ \___ _   _/_  __/___  ____  / /____
-  / /|_/ / __ `/ ___/ / / / _ \ | / // / / __ \/ __ \/ / ___/
- / /  / / /_/ / /__/ /_/ /  __/ |/ // / / /_/ / /_/ / (__  ) 
-/_/  /_/\__,_/\___/_____/\___/|___//_/  \____/\____/_/____/  
-        / /_  __  __       / (_)___ _____  ____ _            
-       / __ \/ / / /  __  / / / __ `/ __ \/ __ `/            
-      / /_/ / /_/ /  / /_/ / / /_/ / / / / /_/ /             
-     /_.___/\__, /   \____/_/\__,_/_/ /_/\__, /              
-           /____/                       /____/               
-EOF
-    echo -e "${NC}"
+    local logo_lines=(
+"    __  ___           ____           ______            __    "
+"   /  |/  /___ ______/ __ \\___ _   _/_  __/___  ____  / /____"
+"  / /|_/ / __ \`/ ___/ / / / _ \\ | / // / / __ \\/ __ \\/ / ___/"
+" / /  / / /_/ / /__/ /_/ /  __/ |/ // / / /_/ / /_/ / (__  ) "
+"/_/  /_/\\__,_/\\___/_____/\\___/|___//_/  \\____/\\____/_/____/  "
+"        / /_  __  __       / (_)___ _____  ____ _            "
+"       / __ \\/ / / /  __  / / / __ \`/ __ \\/ __ \`/            "
+"      / /_/ / /_/ /  / /_/ / / /_/ / / / / /_/ /             "
+"     /_.___/\\__, /   \\____/_/\\__,_/_/ /_/\\__, /              "
+"           /____/                       /____/               "
+    )
+
+    local palette=(${TEAL} ${CYAN} ${BLUE} ${PURPLE} ${PINK} ${ORANGE})
+    local idx=0
+    for line in "${logo_lines[@]}"; do
+        local color=${palette[$((idx % ${#palette[@]}))]}
+        echo -e "${color}${line}${NC}"
+        idx=$((idx + 1))
+    done
+
     echo -e "${GRAY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-    echo -e "${WHITE}              🛠️  Terminal Toolkit v1.0  |  macOS${NC}"
+    echo -e "${WHITE}${BOLD}              🛠️  Terminal Toolkit v1.0  |  macOS${NC}"
     echo -e "${GRAY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo ""
 }
 
 # Show main menu
 show_menu() {
-    echo -e "${YELLOW}  📦 Cache Cleanup${NC}"
-    echo -e "     ${WHITE}1)${NC} Homebrew Cache Cleanup"
-    echo -e "     ${WHITE}2)${NC} pip Cache Cleanup"
-    echo -e "     ${WHITE}3)${NC} npm/pnpm/yarn Cache Cleanup"
-    echo -e "     ${WHITE}4)${NC} Xcode Cache Cleanup"
-    echo -e "     ${WHITE}5)${NC} Docker Cache Cleanup"
-    echo -e "     ${WHITE}6)${NC} Go Module Cache Cleanup"
-    echo -e "     ${WHITE}7)${NC} Cargo (Rust) Cache Cleanup"
-    echo -e "     ${WHITE}8)${NC} Ruby Gems Cache Cleanup"
+    echo -e "${ORANGE}${BOLD}  📦 Cache Cleanup${NC}"
+    echo -e "     ${TEAL}1)${NC} ${WHITE}Homebrew Cache Cleanup${NC}"
+    echo -e "     ${TEAL}2)${NC} ${WHITE}pip Cache Cleanup${NC}"
+    echo -e "     ${TEAL}3)${NC} ${WHITE}npm/pnpm/yarn Cache Cleanup${NC}"
+    echo -e "     ${TEAL}4)${NC} ${WHITE}Xcode Cache Cleanup${NC}"
+    echo -e "     ${TEAL}5)${NC} ${WHITE}Docker Cache Cleanup${NC}"
+    echo -e "     ${TEAL}6)${NC} ${WHITE}Go Module Cache Cleanup${NC}"
+    echo -e "     ${TEAL}7)${NC} ${WHITE}Cargo (Rust) Cache Cleanup${NC}"
+    echo -e "     ${TEAL}8)${NC} ${WHITE}Ruby Gems Cache Cleanup${NC}"
     echo ""
-    echo -e "${YELLOW}  🔧 System Tools${NC}"
-    echo -e "     ${WHITE}9)${NC} Network Connection Check"
-    echo -e "     ${WHITE}10)${NC} Port Usage Killer"
+    echo -e "${PINK}${BOLD}  🔧 System Tools${NC}"
+    echo -e "     ${TEAL}9)${NC} ${WHITE}Network Connection Check${NC}"
+    echo -e "     ${TEAL}10)${NC} ${WHITE}Port Usage Killer${NC}"
     echo ""
-    echo -e "${YELLOW}  ⚡ Quick Actions${NC}"
-    echo -e "     ${WHITE}a)${NC} Clean All Caches"
-    echo -e "     ${WHITE}l)${NC} List All Listening Ports"
-    echo -e "     ${WHITE}c)${NC} Check Common Ports"
+    echo -e "${YELLOW}${BOLD}  ⚡ Quick Actions${NC}"
+    echo -e "     ${TEAL}a)${NC} ${WHITE}Clean All Caches${NC}"
+    echo -e "     ${TEAL}l)${NC} ${WHITE}List All Listening Ports${NC}"
+    echo -e "     ${TEAL}c)${NC} ${WHITE}Check Common Ports${NC}"
     echo ""
     echo -e "${GRAY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-    echo -e "     ${WHITE}h)${NC} Help    ${WHITE}q)${NC} Quit"
+    echo -e "     ${TEAL}h)${NC} ${WHITE}Help${NC}    ${TEAL}q)${NC} ${WHITE}Quit${NC}"
     echo -e "${GRAY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo ""
 }
