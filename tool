@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# MacShellTool - Terminal Toolkit
+# MacDevTools - Terminal Toolkit
 # Global command entry point
 
 # Script directory
-TOOL_DIR="$HOME/ShellTools"
+TOOL_DIR="$HOME/MacDevTools"
 
 # Color definitions
 RED='\033[0;31m'
@@ -26,12 +26,16 @@ clear_screen() {
 show_logo() {
     echo -e "${CYAN}"
     cat << 'EOF'
-    __  ___           _____ __         ____  ______            __
-   /  |/  /___ ______/ ___// /_  ___  / / / /_  __/___  ____  / /
-  / /|_/ / __ `/ ___/\__ \/ __ \/ _ \/ / /   / / / __ \/ __ \/ / 
- / /  / / /_/ / /__ ___/ / / / /  __/ / /   / / / /_/ / /_/ / /  
-/_/  /_/\__,_/\___//____/_/ /_/\___/_/_/   /_/  \____/\____/_/   
-                                                                  
+    __  ___           ____           ______            __    
+   /  |/  /___ ______/ __ \___ _   _/_  __/___  ____  / /____
+  / /|_/ / __ `/ ___/ / / / _ \ | / // / / __ \/ __ \/ / ___/
+ / /  / / /_/ / /__/ /_/ /  __/ |/ // / / /_/ / /_/ / (__  ) 
+/_/  /_/\__,_/\___/_____/\___/|___//_/  \____/\____/_/____/  
+        / /_  __  __       / (_)___ _____  ____ _            
+       / __ \/ / / /  __  / / / __ `/ __ \/ __ `/            
+      / /_/ / /_/ /  / /_/ / / /_/ / / / / /_/ /             
+     /_.___/\__, /   \____/_/\__,_/_/ /_/\__, /              
+           /____/                       /____/               
 EOF
     echo -e "${NC}"
     echo -e "${GRAY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
@@ -223,7 +227,7 @@ cli_mode() {
             ;;
         help|-h|--help)
             echo ""
-            echo "MacShellTool - Terminal Toolkit"
+            echo "MacDevTools - Terminal Toolkit"
             echo ""
             echo "Usage: tool [command] [args]"
             echo ""

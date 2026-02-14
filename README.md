@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://img.icons8.com/color/96/000000/console.png" alt="MacShellTool Logo"/>
+  <img src="https://img.icons8.com/color/96/000000/console.png" alt="MacDevTools Logo"/>
 </p>
 
-<h1 align="center">MacShellTool</h1>
+<h1 align="center">MacDevTools</h1>
 
 <p align="center">
   <strong>🛠️ macOS Terminal Toolkit - All-in-One System Maintenance & Development Tools</strong>
@@ -82,11 +82,11 @@ After installation, run `tool` to start.
 ### Manual Install
 
 ```bash
-# Clone repository to ShellTools directory
-git clone https://github.com/khakhasshi/MacShellTool.git ~/ShellTools
+# Clone repository to MacDevTools directory
+git clone https://github.com/khakhasshi/MacDevTools.git ~/MacDevTools
 
 # Add to PATH (auto-write to .zshrc)
-echo 'export PATH="$HOME/ShellTools:$PATH"' >> ~/.zshrc
+echo 'export PATH="$HOME/MacDevTools:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 
 # Verify installation
@@ -104,11 +104,11 @@ tool
 Launch to see a beautiful TUI interface, use number keys to select functions:
 
 ```
-    __  ___           _____ __         ____  ______            __
-   /  |/  /___ ______/ ___// /_  ___  / / / /_  __/___  ____  / /
-  / /|_/ / __ `/ ___/\__ \/ __ \/ _ \/ / /   / / / __ \/ __ \/ / 
- / /  / / /_/ / /__ ___/ / / / /  __/ / /   / / / /_/ / /_/ / /  
-/_/  /_/\__,_/\___//____/_/ /_/\___/_/_/   /_/  \____/\____/_/   
+    __  ___           ____           ______            __    
+     /  |/  /___ ______/ __ \___ _   _/_  __/___  ____  / /____
+    / /|_/ / __ `/ ___/ / / / _ \ | / // / / __ \/ __ \/ / ___/
+   / /  / / /_/ / /__/ /_/ /  __/ |/ // / / /_/ / /_/ / (__  ) 
+  /_/  /_/\__,_/\___/_____/\___/|___//_/  \____/\____/_/____/  
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
               🛠️  Terminal Toolkit v1.0  |  macOS
@@ -307,7 +307,7 @@ tool port [options] [port]
 ## 📁 Directory Structure
 
 ```
-~/ShellTools/
+~/MacDevTools/
 ├── tool                    # Main entry (global command)
 ├── clean_brew_cache.sh     # Homebrew cache cleanup
 ├── clean_pip_cache.sh      # pip cache cleanup
@@ -319,8 +319,8 @@ tool port [options] [port]
 ├── clean_gem_cache.sh      # Ruby Gems cache cleanup
 ├── check_network.sh        # Network connection check
 ├── port_killer.sh          # Port killer
-├── README.md               # Chinese documentation
-└── README_EN.md            # English documentation
+├── README.md               # English documentation
+└── README_CN.md            # Chinese documentation
 ```
 
 ## 🖼️ Screenshots
@@ -330,11 +330,11 @@ tool port [options] [port]
 
 ### Main Menu
 ```
-    __  ___           _____ __         ____  ______            __
-   /  |/  /___ ______/ ___// /_  ___  / / / /_  __/___  ____  / /
-  / /|_/ / __ `/ ___/\__ \/ __ \/ _ \/ / /   / / / __ \/ __ \/ / 
- / /  / / /_/ / /__ ___/ / / / /  __/ / /   / / / /_/ / /_/ / /  
-/_/  /_/\__,_/\___//____/_/ /_/\___/_/_/   /_/  \____/\____/_/   
+    __  ___           ____           ______            __    
+     /  |/  /___ ______/ __ \___ _   _/_  __/___  ____  / /____
+    / /|_/ / __ `/ ___/ / / / _ \ | / // / / __ \/ __ \/ / ___/
+   / /  / / /_/ / /__/ /_/ /  __/ |/ // / / /_/ / /_/ / (__  ) 
+  /_/  /_/\__,_/\___/_____/\___/|___//_/  \____/\____/_/____/  
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
               🛠️  Terminal Toolkit v1.0  |  macOS
@@ -414,16 +414,16 @@ Kill this process? (y/N):
 
 ## ❓ FAQ
 
-### Q: How to update MacShellTool?
+### Q: How to update MacDevTools?
 
 ```bash
-cd ~/ShellTools
+cd ~/MacDevTools
 git pull origin main
 ```
 
 ### Q: How to add custom tools?
 
-1. Create a new `.sh` file in `~/ShellTools/`
+1. Create a new `.sh` file in `~/MacDevTools/`
 2. Add execute permission: `chmod +x your_script.sh`
 3. Edit the `tool` file to add menu options
 
@@ -435,7 +435,7 @@ Some system-level operations require administrator privileges. The script will p
 
 ```bash
 # Remove directory
-rm -rf ~/ShellTools
+rm -rf ~/MacDevTools
 
 # Remove PATH config (edit .zshrc to remove related lines)
 nano ~/.zshrc
@@ -486,5 +486,5 @@ SOFTWARE.
 </p>
 
 <p align="center">
-  <a href="#macshelltool">⬆️ Back to Top</a>
+  <a href="#macdevtools">⬆️ Back to Top</a>
 </p>

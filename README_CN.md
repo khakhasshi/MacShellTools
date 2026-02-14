@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://img.icons8.com/color/96/000000/console.png" alt="MacShellTool Logo"/>
+  <img src="https://img.icons8.com/color/96/000000/console.png" alt="MacDevTools Logo"/>
 </p>
 
-<h1 align="center">MacShellTool</h1>
+<h1 align="center">MacDevTools</h1>
 
 <p align="center">
   <strong>🛠️ macOS 终端工具集 - 一站式系统维护与开发辅助工具</strong>
@@ -82,11 +82,11 @@ brew install shelltools
 ### 手动安装
 
 ```bash
-# 克隆仓库到 ShellTools 目录
-git clone https://github.com/khakhasshi/MacShellTool.git ~/ShellTools
+# 克隆仓库到 MacDevTools 目录
+git clone https://github.com/khakhasshi/MacDevTools.git ~/MacDevTools
 
 # 添加到 PATH（自动写入 .zshrc）
-echo 'export PATH="$HOME/ShellTools:$PATH"' >> ~/.zshrc
+echo 'export PATH="$HOME/MacDevTools:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 
 # 验证安装
@@ -104,11 +104,11 @@ tool
 启动后将显示精美的 TUI 界面，使用数字键选择对应功能：
 
 ```
-    __  ___           _____ __         ____  ______            __
-   /  |/  /___ ______/ ___// /_  ___  / / / /_  __/___  ____  / /
-  / /|_/ / __ `/ ___/\__ \/ __ \/ _ \/ / /   / / / __ \/ __ \/ / 
- / /  / / /_/ / /__ ___/ / / / /  __/ / /   / / / /_/ / /_/ / /  
-/_/  /_/\__,_/\___//____/_/ /_/\___/_/_/   /_/  \____/\____/_/   
+    __  ___           ____           ______            __    
+     /  |/  /___ ______/ __ \___ _   _/_  __/___  ____  / /____
+    / /|_/ / __ `/ ___/ / / / _ \ | / // / / __ \/ __ \/ / ___/
+   / /  / / /_/ / /__/ /_/ /  __/ |/ // / / /_/ / /_/ / (__  ) 
+  /_/  /_/\__,_/\___/_____/\___/|___//_/  \____/\____/_/____/  
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
               🛠️  终端工具集 v1.0  |  macOS
@@ -307,7 +307,7 @@ tool port [选项] [端口号]
 ## 📁 目录结构
 
 ```
-~/ShellTools/
+~/MacDevTools/
 ├── tool                    # 主入口（全局命令）
 ├── clean_brew_cache.sh     # Homebrew 缓存清理
 ├── clean_pip_cache.sh      # pip 缓存清理
@@ -319,7 +319,8 @@ tool port [选项] [端口号]
 ├── clean_gem_cache.sh      # Ruby Gems 缓存清理
 ├── check_network.sh        # 网络连接检查
 ├── port_killer.sh          # 端口占用查杀
-└── README.md               # 说明文档
+├── README.md               # 英文文档
+└── README_CN.md            # 中文文档
 ```
 
 ## 🖼️ 截图
@@ -329,11 +330,11 @@ tool port [选项] [端口号]
 
 ### 主菜单
 ```
-    __  ___           _____ __         ____  ______            __
-   /  |/  /___ ______/ ___// /_  ___  / / / /_  __/___  ____  / /
-  / /|_/ / __ `/ ___/\__ \/ __ \/ _ \/ / /   / / / __ \/ __ \/ / 
- / /  / / /_/ / /__ ___/ / / / /  __/ / /   / / / /_/ / /_/ / /  
-/_/  /_/\__,_/\___//____/_/ /_/\___/_/_/   /_/  \____/\____/_/   
+    __  ___           ____           ______            __    
+     /  |/  /___ ______/ __ \___ _   _/_  __/___  ____  / /____
+    / /|_/ / __ `/ ___/ / / / _ \ | / // / / __ \/ __ \/ / ___/
+   / /  / / /_/ / /__/ /_/ /  __/ |/ // / / /_/ / /_/ / (__  ) 
+  /_/  /_/\__,_/\___/_____/\___/|___//_/  \____/\____/_/____/  
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
               🛠️  终端工具集 v1.0  |  macOS
@@ -422,5 +423,5 @@ tool port [选项] [端口号]
 </p>
 
 <p align="center">
-  <a href="#top">⬆️ 回到顶部</a>
+  <a href="#macdevtools">⬆️ 回到顶部</a>
 </p>
