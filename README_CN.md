@@ -60,6 +60,7 @@
 | 🦀 | Cargo | 清理 Rust 注册表、Git 缓存 |
 | 💎 | Ruby Gems | 清理 gem 缓存、旧版本 |
 | 🎮 | Steam | 清理 Steam 下载 / app / http 缓存 |
+| 📺 | Apple TV | 清理 Apple TV 缓存 / 下载缓存 |
 | 🌐 | DNS Lookup | 查询域名的 NS IPv4 |
 | 🌐 | Network | 网络连接诊断、DNS 检查 |
 | 🔌 | Port | 端口占用查看与进程管理 |
@@ -135,6 +136,7 @@ tool node          # 清理 npm/pnpm/yarn 缓存
 tool xcode         # 清理 Xcode 缓存
 tool docker        # 清理 Docker 缓存
 tool steam         # 清理 Steam 下载缓存
+tool appletv       # 清理 Apple TV 缓存
 tool go            # 清理 Go 模块缓存
 tool cargo         # 清理 Cargo 缓存
 tool gem           # 清理 Ruby Gems 缓存
@@ -317,6 +319,19 @@ tool network
 
 ### 12. 端口占用查杀 (`port_killer.sh`)
 
+---
+
+### 13. Apple TV 缓存清理 (`clean_appletv_cache.sh`)
+
+```bash
+tool appletv
+```
+
+**功能：**
+- ✅ 清理 Apple TV App 缓存与下载缓存
+- ✅ 清理 Group Container 相关缓存
+- ⚠️ 建议清理前退出 Apple TV 应用
+
 ```bash
 tool port [选项] [端口号]
 ```
@@ -349,6 +364,7 @@ tool port [选项] [端口号]
 ├── clean_cargo_cache.sh    # Cargo 缓存清理
 ├── clean_gem_cache.sh      # Ruby Gems 缓存清理
 ├── clean_steam_cache.sh    # Steam 下载缓存清理
+├── clean_appletv_cache.sh  # Apple TV 缓存清理
 ├── dns_lookup.sh           # 域名 NS IPv4 查询
 ├── check_network.sh        # 网络连接检查
 ├── port_killer.sh          # 端口占用查杀
@@ -382,12 +398,13 @@ tool port [选项] [端口号]
      6) Go 模块缓存清理
      7) Cargo (Rust) 缓存清理
      8) Ruby Gems 缓存清理
-     9) Steam 下载缓存清理
+      9) Steam 下载缓存清理
+     10) Apple TV 缓存清理
 
   🔧 系统工具
-     10) 网络连接检查
-     11) DNS NS IPv4 查询
-     12) 端口占用查杀
+     11) 网络连接检查
+     12) DNS NS IPv4 查询
+     13) 端口占用查杀
 
   ⚡ 快捷操作
      a) 一键清理所有缓存

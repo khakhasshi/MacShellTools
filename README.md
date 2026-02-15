@@ -60,6 +60,7 @@
 | 🦀 | Cargo | Clean Rust registry, Git cache |
 | 💎 | Ruby Gems | Clean gem cache, old versions |
 | 🎮 | Steam | Clean Steam download/app/http cache |
+| 📺 | Apple TV | Clean Apple TV app caches/download cache |
 | 🌐 | DNS Lookup | Resolve domain nameserver IPv4 |
 | 🌐 | Network | Network diagnostics, DNS check |
 | 🔌 | Port | Port usage viewer & process manager |
@@ -135,6 +136,7 @@ tool node          # Clean npm/pnpm/yarn cache
 tool xcode         # Clean Xcode cache
 tool docker        # Clean Docker cache
 tool steam         # Clean Steam download cache
+tool appletv       # Clean Apple TV cache
 tool go            # Clean Go module cache
 tool cargo         # Clean Cargo cache
 tool gem           # Clean Ruby Gems cache
@@ -317,6 +319,19 @@ tool network
 
 ### 12. Port Killer (`port_killer.sh`)
 
+---
+
+### 13. Apple TV Cache Cleanup (`clean_appletv_cache.sh`)
+
+```bash
+tool appletv
+```
+
+**Features:**
+- ✅ Clean Apple TV app caches and download cache
+- ✅ Clear group container caches
+- ⚠️ Recommend quitting Apple TV app before cleaning
+
 ```bash
 tool port [options] [port]
 ```
@@ -349,6 +364,7 @@ tool port [options] [port]
 ├── clean_cargo_cache.sh    # Cargo cache cleanup
 ├── clean_gem_cache.sh     # Ruby Gems cache cleanup
 ├── clean_steam_cache.sh   # Steam download cache cleanup
+├── clean_appletv_cache.sh  # Apple TV cache cleanup
 ├── dns_lookup.sh          # DNS nameserver IPv4 lookup
 ├── check_network.sh       # Network connection check
 ├── port_killer.sh         # Port killer
@@ -382,12 +398,13 @@ tool port [options] [port]
      6) Go Cache Cleanup
      7) Cargo Cache Cleanup
      8) Ruby Gems Cache Cleanup
-     9) Steam Download Cache Cleanup
+      9) Steam Download Cache Cleanup
+     10) Apple TV Cache Cleanup
 
   🔧 System Tools
-     10) Network Connection Check
-     11) DNS Nameserver Lookup
-     12) Port Killer
+     11) Network Connection Check
+     12) DNS Nameserver Lookup
+     13) Port Killer
 
   ⚡ Quick Actions
      a) One-Click Clean All
